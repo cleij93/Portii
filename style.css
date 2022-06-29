@@ -10,15 +10,21 @@ body {
     background-color: #261C2C;
     min-height: 100vh;
 }
-@keyframes floating {
+/* @keyframes floating {
     0% { transform: translate(0,  0px); }
-    50%  { transform: translate(10px, 0px); }
+    50%  { transform: translate(7px, 0px); }
     100%   { transform: translate(0, -0px); }   
-}
+}*/
+
+@keyframes spin3D {
+    from { transform: rotateY(0deg) }
+    to { transform: rotateY(360deg) }
+  }
+
 .lotus {
     margin-left: 2rem;
     margin-top: 1rem;
-    animation: floating ease-in-out infinite 2s;
+    animation: spin3D ease-in infinite 3s;
 }
 
 nav ul {
@@ -59,7 +65,7 @@ a:active {
     border: #5C527F 8px ridge;
     margin: 0 auto;
     width: 40rem;
-    height: 48rem;
+    height: 50rem;
 }
 
 @keyframes blink {
@@ -97,7 +103,20 @@ a:active {
     background-color: #261C2C;
     color: #6E85B2;
     border: none;
-    padding: .5rem;
+    padding: .8rem;
     font-family: 'Press Start 2P', cursive;
     border: #5C527F .3rem ridge;
+}
+
+div .eform {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    
+}
+.forminputs, textarea {
+    width:100%;
+    margin-top: .5rem;
+    font-family: 'Space Mono', monospace;
+
 }
